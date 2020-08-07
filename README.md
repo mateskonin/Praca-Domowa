@@ -1,2 +1,2 @@
 # SamurajProgramowania-kurs_Front-End
-Course HTML CSS JS React Node
+Projects HTML CSS JS React
