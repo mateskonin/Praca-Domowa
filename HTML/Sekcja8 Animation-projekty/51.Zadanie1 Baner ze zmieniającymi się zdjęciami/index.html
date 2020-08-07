@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            /* - usuwa przestrzeń miedzy zdjęciami*/
+            max-height: 600px;
+        }
+
+        img:nth-child(1) {
+            z-index: 1;
+            animation: slide 5s linear infinite;
+            opacity: 1;
+        }
+
+        /* img:nth-child(2) {
+            transform: translateY(-100%); -jesli position w img jest relative
+        } */
+
+        @keyframes slide {
+            35% {
+                opacity: 1;
+            }
+
+            45% {
+                opacity: 0;
+            }
+
+            85% {
+                opacity: 0;
+            }
+
+            95% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="wodospad.jpg" alt="">
+        <img src="paris.jpg" alt="">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            display: block;
+            margin: 10px auto;
+        }
+        div{
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            margin: 5px;
+            float: left;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+        .circle{
+            background-color: azure;
+            border-radius:50%;
+            color: black;
+            border: 2px solid black;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <button onclick="btn()">Utwórz element</button>
+
+    <script>
+        /*
+        SPOSÓB 1
+        const btn = document.querySelector("button");//const btn = document.getElementById("nazwaId")
+
+        let number = 1;
+
+        const addElement = () => {
+
+            
+            
+            const div = document.createElement('div');
+          
+            
+            div.textContent=number;
+            
+            document.querySelector('body').appendChild(div);
+            if(number%5==0){
+                div.classList.add('circle')
+            }
+            number++;
+        }
+
+        btn.addEventListener("click", addElement)
+        
+        SPOSÓB  2   */
+
+        let number = 1;
+        function btn(){
+            const div = document.createElement('div');
+          
+            
+            div.textContent=number;
+            
+            document.querySelector('body').appendChild(div);
+            if(number%5==0){
+                div.classList.add('circle')
+            }
+            number++;
+
+        }
+    </script>
+
+</body>
+</html>

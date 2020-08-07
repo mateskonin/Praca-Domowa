@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie 1 - zmiana koloru po najechaniu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            width: 100px;
+            position: fixed;
+            top: 10vh;
+            right: calc(50vw - 50px);
+            text-align: center;
+        }
+
+        button:hover~div {
+            position: absolute;
+            top: calc(100vh - 90px);
+            left: calc(100vw - 90px);
+            background-color: black;
+            height: 90px;
+            width: 90px;
+        }
+
+        div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 30px;
+            width: 30px;
+            background-color: black;
+            transition: 5s linear;
+            /* transition: left 2s linear, top 2s 2s;// żeby poruszała sie anjpierw w prawo, potem w dół */
+        }
+    </style>
+</head>
+
+<body>
+    <button>Lecimy!</button>
+    <div class="square"></div>
+</body>
+
+</html>

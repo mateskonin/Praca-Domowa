@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>nacisnij</button>
+    <ul>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+        <li>przycisk</li>
+    </ul>
+    
+    <script>
+        const lis=document.querySelectorAll('li');
+        const btn=document.querySelector('button');
+        let heightFont=10;
+        const show=()=>{
+            // lis.forEach((li)=>{
+            //     li.style.display="block";
+            //     //li.style.fontSize="10px";
+            //     li.style.fontSize=heightFont+"px";    
+            // })
+            for(let i=0; i<lis.length; i++){
+                lis[i].style.display="block";
+                lis[i].style.fontSize=heightFont+"px";
+            }
+            heightFont++;
+
+        };
+        btn.addEventListener("click",show);
+
+    </script>
+</body>
+</html>

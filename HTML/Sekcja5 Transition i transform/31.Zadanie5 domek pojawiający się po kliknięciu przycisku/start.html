@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie - kwadrat i linia - wyśrodkowanie</title>
+    <style>
+        div {
+            width: 1px;
+            height: 1px;
+            background-color: coral;
+            transition: 3s linear;
+            position: absolute;
+            top: 100%;
+            left: 10%;
+        }
+
+        span {
+            background-color: coral;
+            border: 2px solid black;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .b {
+            transform: rotate(-1600deg);
+        }
+
+        span:hover~.a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 300px;
+            background-color: red;
+            z-index: 0;
+        }
+
+        span:hover~.b {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, calc(-50% - 150px)) rotate(45deg);
+            /* transform-origin: 50%, 50%; */
+            width: 283px;
+            height: 283px;
+            background-color: black;
+            z-index: -1;
+        }
+
+        span:hover~.c {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, calc(-50% + 75px));
+            width: 100px;
+            height: 150px;
+            background-color: grey;
+            z-index: 1;
+        }
+
+        span:hover~.d {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(calc(-50% + 135px), calc(-50% - 25px));
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            z-index: 1;
+        }
+
+        span:hover~.e {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(calc(-50% - 135px), calc(-50% - 25px));
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            z-index: 1;
+        }
+
+        span:hover~.f {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(calc(-50% - 135px), calc(-50% - 200px));
+            width: 50px;
+            height: 100px;
+            background-color: grey;
+            z-index: -2;
+        }
+    </style>
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+    <div class="e"></div>
+    <div class="f"></div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    
+    <script>
+        const button=document.createElement('button');
+        document.body.appendChild(button);
+        button.innerHTML="przycisk";
+
+        const buttonReset=document.createElement('button');
+        document.body.appendChild(buttonReset);
+        buttonReset.innerHTML="wyczyść";
+
+        
+        const ul=document.createElement('ul');
+        document.body.appendChild(ul);
+
+        let fontSizer=10;
+        let number = 1;
+
+
+        const addElement = () => {
+            for(let i=0; i<10; i++){
+            const li=document.createElement('li');
+            document.querySelector("ul").appendChild(li);
+            li.style.fontSize=fontSizer+"px";//`${fontSizer++}px`
+            li.innerHTML="napis"+number++;
+            fontSizer++;    
+            }
+        };
+
+        const delElement = () => {
+            ul.innerHTML="";
+            fontSizer=10;
+            number=1;
+            
+        };
+
+        button.addEventListener("click",addElement)
+        buttonReset.addEventListener("click",delElement)
+
+    </script>
+</body>
+</html>

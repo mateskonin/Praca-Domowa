@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> JSX to Simplify things </title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!--    do tłumaczenia (transpilacji) kodu JSX / ES6 na ES5-->
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        .helloWrapper {
+            text-align: center;
+        }
+        .box {
+            padding: 15px;
+            border: 3px solid darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root"></div>
+    <div id="root2"></div>
+
+    <script type="text/babel"> // text/babel MUSI trafić do transpilacji biblioteką Babel
+        /**
+         * Sprawdź i porównaj z przykładami, które robiliśmy wcześniej
+         * Zauważ ilość nakładu i pisania w tych podejściach.
+         *
+         * Cel:
+         * Zrozumienie jak działa składnia JSX (JavaScript XML) i po co jest potrzebna.
+         * Jaka stała motywacja za tym żeby ją utworzyć.
+         * Porównanie JSX a HTML
+         *
+         * ciało tego skryptu to JavaScript ze składnią JSX
+         * */
+
+	    function HelloReactComponent () { // ta funkcja zwraca komponent React
+	    	return ( // obiekt HTML lub tablicę obiektów
+                <div className="helloWrapper"> {/* tutaj będzie React.createElement(...*/}
+                    <h1>More important header</h1>
+                    <h2>Hello World 2</h2>{/* tutaj będzie React.createElement(...*/}
+                    <p className="box">{/* tutaj będzie React.createElement(...*/}
+                        Welcome to my example {evaluateTheJavaScript}
+                    </p>
+                </div>
+            )
+        }
+
+        const evaluateTheJavaScript = (
+          <span> 2 + 2 = { 2 + 2 } </span>
+        )
+
+        const $root = document.getElementById('root');
+        const $root2 = document.getElementById('root2');
+
+	    ReactDOM.render(<HelloReactComponent />, $root);
+	    ReactDOM.render(<HelloReactComponent />, $root2);
+    </script>
+</body>
+</html>

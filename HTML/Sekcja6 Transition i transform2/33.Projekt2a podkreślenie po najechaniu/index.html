@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zegar</title>
+    <style>
+        button {
+            position: absolute;
+            top: 20vh;
+            left: 20vw;
+            line-height: 10vh;
+            transition: 3s linear;
+            text-align: center;
+            /* padding: 20px; */
+            margin: auto;
+            border: none;
+            background-color: white;
+            padding: 0;
+        }
+
+        span {
+
+            height: 2px;
+            background-color: black;
+            width: 0px;
+            transition: 0.5s linear;
+        }
+
+        button:hover span {
+            height: 2px;
+            background-color: black;
+            width: 100%;
+            z-index: 1;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button>PRZYCISK<span></span></button>
+</body>
+
+</html>
